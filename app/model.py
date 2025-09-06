@@ -8,7 +8,7 @@ import torch
 from torchvision.transforms import v2 as transforms
 
 # this gives us access to the variables in .env file
-#load_env()
+# load_env()
 wandb_api_key = os.environ.get("WANDB_API_KEY")
 
 # This is the local folder where the wandb model will be downloaded
@@ -64,8 +64,8 @@ def load_model() -> ResNet:
 
     return model
 
-#live_resnet = load_model()
-#print(live_resnet)
+# live_resnet = load_model()
+# print(live_resnet)
 
 
 # we explicitely write the trnasforms with clear and ordered steps and sizes
