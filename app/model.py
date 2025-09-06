@@ -8,7 +8,7 @@ import torch
 from torchvision.transforms import v2 as transforms
 
 # this gives us access to the variables in .env file
-load_env()
+#load_env()
 wandb_api_key = os.environ.get("WANDB_API_KEY")
 
 # This is the local folder where the wandb model will be downloaded
@@ -28,7 +28,7 @@ def download_artifact():
     wandb_model_version = os.environ.get("WANDB_MODEL_VERSION")
     
     artifact_path = f'{wandb_org}/{wandb_project}/{wandb_model_name}:{wandb_model_version}'
-    print(f"Downloading artifact from {artifact_path}")
+    #print(f"Downloading artifact from {artifact_path}")
     
     artifact = api.artifact(artifact_path, type='model')
     artifact.download(root=MODELS_DIR)
@@ -64,8 +64,8 @@ def load_model() -> ResNet:
 
     return model
 
-live_resnet = load_model()
-print(live_resnet)
+#live_resnet = load_model()
+#print(live_resnet)
 
 
 # we explicitely write the trnasforms with clear and ordered steps and sizes

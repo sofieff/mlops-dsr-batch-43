@@ -1,2 +1,6 @@
 .venv
 .env
+hello.py
+__pycache__/
+app/__pycache__
+*.pyc
